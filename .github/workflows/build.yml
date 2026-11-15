@@ -21,7 +21,7 @@ jobs:
       - name: Install Capacitor
         run: |
           npm install @capacitor/core @capacitor/cli
-          npx cap init Niloofar com.niloofar.app --web-dir .
+          npx cap init Niloofar com.niloofar.app --web-dir www
 
       - name: Add Android
         run: |
