@@ -13,9 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Android
-        uses: android-actions/setup-android@v3
+      - name: Accept Android licenses
+        run: yes | sdkmanager --licenses
 
-      - name: Create APK
-        run: |
-          echo "APK build started"
+      - name: Build
+        run: echo "Ready"
