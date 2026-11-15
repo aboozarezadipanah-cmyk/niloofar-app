@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get files
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build APK
+      - name: Setup Android
+        uses: android-actions/setup-android@v3
+
+      - name: Create APK
         run: |
-          echo "Preparing APK build"
+          echo "APK build started"
