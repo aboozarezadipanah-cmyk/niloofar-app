@@ -13,8 +13,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Accept Android licenses
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Android
+        uses: android-actions/setup-android@v3
+
+      - name: Accept licenses
         run: yes | sdkmanager --licenses
 
-      - name: Build
-        run: echo "Ready"
+      - name: Test
+        run: echo "Android ready"
