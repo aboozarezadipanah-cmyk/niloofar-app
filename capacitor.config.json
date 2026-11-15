@@ -1,5 +1,5 @@
 {
   "appId": "com.niloofar.app",
   "appName": "Niloofar",
-  "webDir": "www"
+  "webDir": "."
 }
