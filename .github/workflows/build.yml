@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -23,5 +23,19 @@ jobs:
           npm install @capacitor/core @capacitor/cli
           npx cap init Niloofar com.niloofar.app --web-dir .
 
-      - name: Build
-        run: echo "Ready for APK"
+      - name: Add Android
+        run: |
+          npm install @capacitor/android
+          npx cap add android
+
+      - name: Build APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: niloofar-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
