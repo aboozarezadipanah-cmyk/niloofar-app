@@ -1,12 +1,8 @@
 {
-  "name": "niloofar-app",
+  "name": "banuye-khas",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@capacitor/android": "^6.1.2",
-    "@capacitor/core": "^6.1.2"
-  },
-  "devDependencies": {
-    "@capacitor/cli": "^6.1.2"
-  }
+  "description": "فروشگاه آنلاین بانویِ خاص",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
 }
