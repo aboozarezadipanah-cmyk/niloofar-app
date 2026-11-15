@@ -10,25 +10,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
       - name: Install Capacitor
         run: |
-          npm install @capacitor/core @capacitor/cli
+          npm install @capacitor/core @capacitor/cli @capacitor/android
           npx cap init Niloofar com.niloofar.app --web-dir www
 
       - name: Add Android
         run: |
-          npm install @capacitor/android
-          npx cap add android
+          npx cap add android || true
 
-      - name: Build APK
+      - name: Copy Web Assets
+        run: |
+          npx cap copy android
+
+      - name: Build Debug APK
         run: |
           cd android
           chmod +x gradlew
@@ -37,5 +46,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: niloofar-apk
+          name: Niloofar-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
