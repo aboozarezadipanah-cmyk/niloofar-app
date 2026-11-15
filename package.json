@@ -2,7 +2,17 @@
   "name": "banuye-khas",
   "version": "1.0.0",
   "private": true,
-  "description": "فروشگاه آنلاین بانویِ خاص",
-  "scripts": { "start": "node server.js" },
-  "engines": { "node": ">=18" }
+  "description": "فروشگاه آنلاین بانوی خاص",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@capacitor/core": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  }
 }
