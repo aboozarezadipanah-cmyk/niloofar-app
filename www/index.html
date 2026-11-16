@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Niloofar</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بانویِ خاص</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
-<h1>نیلوفر</h1>
-<p>اپلیکیشن من آماده است</p>
+<header><button id="hb" aria-label="منو" aria-expanded="false"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><b><a href="#home">بانویِ خاص</a></b><div class="hi"><button id="sb" aria-label="جست‌وجو"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button><a id="cb" href="#cart" aria-label="سبد خرید"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><i id="cc"></i></a></div><div id="sr" hidden><input id="sq" type="search" placeholder="جست‌وجوی محصول" aria-label="جست‌وجوی محصول"></div><div id="dr" hidden><div id="ov"></div><button id="xb" aria-label="بستن">✕</button><nav id="dl"></nav></div></header>
+<main>
+<div class="hero" data-p="home">
+<img class="seal" alt="لوگوی بانویِ خاص" src="/logo.jpg">
+<h1>لباسی که به خودِ تو می‌آید</h1>
+<p>شال، روسری، شلوار و شومیز برای بانوانی که ساده و باکلاس لباس می‌پوشند.</p>
+<a class="btn" href="#cat-all">دیدن محصولات</a>
+</div>
+<section class="band" id="bd" data-p="home"></section>
+<section id="shop" data-p="home"><h2>دسته‌بندی‌ها</h2>
+<div class="cats"><a class="cat" href="#">شال</a><a class="cat" href="#">روسری</a><a class="cat" href="#">شلوار</a><a class="cat" href="#">شومیز</a></div></section>
+<section data-p="home"><h2>تازه‌ها</h2><div id="nw" class="empty">محصولات تازه به‌زودی اینجا قرار می‌گیرند.</div></section>
+<section id="about" class="about off" data-p="about"><div><h2>درباره‌ی ما</h2><div id="pg-about"><p>داستان برند به‌زودی اینجا نوشته می‌شود.</p></div></div></section>
+<section id="blog" class="off" data-p="blog"><h2>بلاگ</h2><div class="empty">نکته‌های ست لباس و مقاله‌ها اینجا قرار می‌گیرند.</div></section>
+<section class="off" data-p="terms"><h2>قوانین و شرایط</h2><div id="pg-terms"></div></section>
+<section class="off" data-p="faq"><h2>سوالات متداول</h2><div id="pg-faq"></div></section>
+<section class="off" data-p="track"><h2>پیگیری سفارش</h2><form class="fm" id="tf"><label>شماره‌ی سفارش<input id="t-i" inputmode="numeric" required></label><label>شماره‌ی تماس<input id="t-p" type="tel" inputmode="tel" required></label><button class="ab p" type="submit">پیگیری</button></form><div id="tr" role="status"></div></section>
+<section class="off" data-p="size"><h2>راهنمای سایز</h2><div class="empty">جدول سایز فروشگاه اینجا قرار می‌گیرد.</div></section>
+<section class="off" data-p="contact"><h2>تماس با ما</h2><div id="ct" class="empty">راه‌های ارتباطی به‌زودی اینجا قرار می‌گیرد.</div></section>
+</main>
+<div id="shopv"></div>
+<footer><span id="sec">© بانویِ خاص</span><small>طراحی و ساخت با اسکیل <a href="#">فیتوکد</a></small></footer>
+<div id="adm"></div>
+<script src="/app.js"></script>
 </body>
 </html>
